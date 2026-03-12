@@ -1,0 +1,43 @@
+# CLion / JetBrains
+.idea/
+*.iml
+
+# CMake build directories
+cmake-build-*/
+build/
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Compiled binaries
+*.o
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Libraries
+*.a
+*.lib
+
+# Debug files
+*.dSYM/
+*.stackdump
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SSH keys and secrets
+*.pem
+id_ed25519
+id_rsa
+.ssh/
+
+# Environment files
+.env
