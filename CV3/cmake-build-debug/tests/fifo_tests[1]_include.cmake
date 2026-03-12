@@ -1,0 +1,5 @@
+if(EXISTS "/media/viktor/Data/OPK/CV3/cmake-build-debug/tests/fifo_tests[1]_tests.cmake")
+  include("/media/viktor/Data/OPK/CV3/cmake-build-debug/tests/fifo_tests[1]_tests.cmake")
+else()
+  add_test(fifo_tests_NOT_BUILT fifo_tests_NOT_BUILT)
+endif()

@@ -1,0 +1,51 @@
+viktor@viktor-Zenbook:/media/viktor/Data/OPK/CV3$ cmake -S . -B cmake-build-debug
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /media/viktor/Data/OPK/CV3/cmake-build-debug
+viktor@viktor-Zenbook:/media/viktor/Data/OPK/CV3$ cmake --build cmake-build-debug
+[  6%] Building CXX object src/fifo_lib/CMakeFiles/fifo_lib.dir/camera_frame.cpp.o
+[ 12%] Building CXX object src/fifo_lib/CMakeFiles/fifo_lib.dir/frame_fifo.cpp.o
+[ 18%] Building CXX object src/fifo_lib/CMakeFiles/fifo_lib.dir/list_node.cpp.o
+[ 25%] Linking CXX static library libfifo_lib.a
+[ 25%] Built target fifo_lib
+[ 31%] Building CXX object CMakeFiles/fifo_app.dir/main.cpp.o
+[ 37%] Linking CXX executable fifo_app
+[ 37%] Built target fifo_app
+[ 43%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 50%] Linking CXX static library ../../../lib/libgtest.a
+[ 50%] Built target gtest
+[ 56%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 62%] Linking CXX static library ../../../lib/libgmock.a
+[ 62%] Built target gmock
+[ 68%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[ 75%] Linking CXX static library ../../../lib/libgmock_main.a
+[ 75%] Built target gmock_main
+[ 81%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 87%] Linking CXX static library ../../../lib/libgtest_main.a
+[ 87%] Built target gtest_main
+[ 93%] Building CXX object tests/CMakeFiles/fifo_tests.dir/tests.cpp.o
+[100%] Linking CXX executable fifo_tests
+[100%] Built target fifo_tests
+viktor@viktor-Zenbook:/media/viktor/Data/OPK/CV3$ ctest -C Debug -V
+UpdateCTestConfiguration  from :/media/viktor/Data/OPK/CV3/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/media/viktor/Data/OPK/CV3/DartConfiguration.tcl
+Test project /media/viktor/Data/OPK/CV3
+Constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+No tests were found!!!
+viktor@viktor-Zenbook:/media/viktor/Data/OPK/CV3$ cd cmake-build-debug
+./tests/fifo_tests
+Running main() from /media/viktor/Data/OPK/CV3/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CameraFrame
+[ RUN      ] CameraFrame.NewFrameFIFOIsEmpty
+[       OK ] CameraFrame.NewFrameFIFOIsEmpty (0 ms)
+[----------] 1 test from CameraFrame (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
